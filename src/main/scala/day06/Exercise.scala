@@ -107,6 +107,7 @@ object Exercise {
     // hive 无法删除，更新某一条数据。
 //    spark.sql("delete from emp where deptno = 10 order by sal desc limit 1")
 
+    spark.stop()
   }
 
   /**

@@ -29,7 +29,6 @@ object RDD2DataFrame_3 {
         StructField("age", IntegerType, nullable = true)
       )
     )
-    structType
 
     // 不能直接生成元组，需要生成Row类型
     val rowRDD: RDD[Row] = lineRDD.map(p=>Row(p(0),p(1).trim.toInt))
