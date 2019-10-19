@@ -54,7 +54,7 @@
         <dependency>
             <groupId>org.apache.hive</groupId>
             <artifactId>hive-exec</artifactId>
-            <version>1.2.1</version>
+            <version>1.2.2</version>
         </dependency>
         <!-- 是因为需要使⽤用到mysql数据库(因为元数据在这里面)-->
         <dependency>
