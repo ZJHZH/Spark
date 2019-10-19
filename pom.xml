@@ -56,7 +56,7 @@
             <artifactId>hive-exec</artifactId>
             <version>1.2.1</version>
         </dependency>
-        <!-- 是因为需要使⽤用到mysql数据库(因为元数据在这⾥里里⾯面)-->
+        <!-- 是因为需要使⽤用到mysql数据库(因为元数据在这里面)-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
