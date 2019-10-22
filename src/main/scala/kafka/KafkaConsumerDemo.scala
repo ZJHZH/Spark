@@ -17,7 +17,7 @@ object KafkaConsumerDemo {
     val properties: Properties = new Properties()
 
     // 指定Kafka集群列表
-    properties.put("bootstrap.server","hadoop04:9092,hadoop05:9092,hadoop06:9092")
+    properties.put("bootstrap.servers","hadoop04:9092,hadoop05:9092,hadoop06:9092")
 
     // 指定响应方式
     properties.put("acks","all")
@@ -36,7 +36,7 @@ object KafkaConsumerDemo {
     val consumer: KafkaConsumer[String, String] = new KafkaConsumer[String,String](properties)
 
     // 需要订阅topic
-    consumer.subscribe(Collections.singletonList("test"))
+    consumer.subscribe(Collections.singletonList("test1"))
 
     // 开始消费数据
     while (true){

@@ -15,6 +15,12 @@ object Test2 {
     println(str)
   }
 
+  /**
+   *
+   * @param arr
+   * @param ip
+   * @return
+   */
   def binarySearch(arr: Array[(String, String, String)], ip: String): Int = {
     var start: Int = 0
     var end: Int = 0

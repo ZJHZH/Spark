@@ -15,7 +15,7 @@ object KafkaProducerDemo {
     val properties: Properties = new Properties()
 
     // 指定Kafka集群列表
-    properties.put("bootstrap.server","hadoop04:9092,hadoop05:9092,hadoop06:9092")
+    properties.put("bootstrap.servers","hadoop04:9092,hadoop05:9092,hadoop06:9092")
 
     // 指定响应方式
     properties.put("acks","all")
@@ -37,7 +37,7 @@ object KafkaProducerDemo {
       val msg: String = "{" + i + "}: this is kafka data"
 
       // 发送数据
-      producer.send(new ProducerRecord[String,String]("test",msg))
+      producer.send(new ProducerRecord[String,String]("test1",msg))
 
       Thread.sleep(500)
     }

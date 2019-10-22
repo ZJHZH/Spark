@@ -9,7 +9,7 @@ import org.apache.spark.sql.expressions.Aggregator
  * @author ZJHZH
  */
 class MyAverage2 extends Aggregator[Employee,Average,Double]{
-  // 初始化
+  // 初始化分区共享变量
   override def zero: Average = Average(0.0,0.0)
 
   // 分区内聚合
@@ -29,10 +29,10 @@ class MyAverage2 extends Aggregator[Employee,Average,Double]{
   // 计算最终结果
   override def finish(reduction: Average): Double = reduction.sum / reduction.count
 
-  //
+  // 设置类型解码器，要转换成case类，Encoders.product是进行scala元组和case类类型转换的编码器
   override def bufferEncoder: Encoder[Average] = Encoders.product
 
-  //
+  // 设置最终输出的解码器，获取的是Scala中的数据类型
   override def outputEncoder: Encoder[Double] = Encoders.scalaDouble
 }
 
