@@ -16,7 +16,7 @@ import org.apache.spark.streaming.{Seconds, StreamingContext}
 object WorldCount {
   def main(args: Array[String]): Unit = {
     // 如果想创建SparkSteaming对象需要使用一个类StreamingContext
-    val ssc: StreamingContext = new StreamingContext(new SparkConf().setAppName("").setMaster("local[2]"),Seconds(5))
+    val ssc: StreamingContext = new StreamingContext(new SparkConf().setAppName("WorldCount").setMaster("local[2]"),Seconds(5))
 
     // 获取实时数据，从netcat服务器端获取数据
     // 需要传入对应IP地址和对应端口号即可以获取到数据
